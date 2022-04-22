@@ -16,6 +16,9 @@ runs:
         JSON=$(jq '.' ${{ inputs.json_file }})
         echo $JSON
         KEYS=$(cat ${{ inputs.json_file }} | jq 'select(objects)|=[.] | map( paths(scalars) ) | map( map(select(numbers)="[]") | join(".")) | unique')
+        KEYS=${KEYS//[/ }
+        KEYS=${KEYS//]/ }
+        KEYS=${KEYS//,/ }
         echo $KEYS
         declare -a arr=(`echo ${KEYS}`);
         ## now loop through the above array
