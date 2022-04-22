@@ -26,7 +26,7 @@ runs:
         do
           KEY=$i
           echo $KEY
-          VALUE=$(echo $JSON | jq '.$KEY')
+          VALUE=$(echo $JSON | jq '.\$KEY')
           echo VALUE: $VALUE
           # Add to GITHUB_ENV
         done
