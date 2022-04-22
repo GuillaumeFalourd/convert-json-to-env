@@ -25,7 +25,7 @@ runs:
         for i in "${arr[@]}"
         do
           echo KEY: "$i"
-          VALUE=$(jq '.[$i]' ${{ inputs.json_file }})
+          VALUE=$(echo $JSON | jq '.[$i]')
           echo VALUE: $VALUE
           # Add to GITHUB_ENV
         done
