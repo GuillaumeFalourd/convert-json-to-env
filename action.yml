@@ -24,8 +24,10 @@ runs:
         ## now loop through the above array
         for i in "${arr[@]}"
         do
-          echo "$i"
-          # or do whatever with individual element of the array
+          echo KEY: "$i"
+          VALUE=$(jq '.[$i]' ${{ inputs.json_file }})
+          echo VALUE: $VALUE
+          # Add to GITHUB_ENV
         done
       shell: bash
 
