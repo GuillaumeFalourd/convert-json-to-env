@@ -15,6 +15,7 @@ runs:
         echo FILE: ${{ inputs.json_file }} 
         JSON=$(jq '.' ${{ inputs.json_file }})
         echo $JSON
+        cat ${{ inputs.json_file }} | jq 'select(objects)|=[.] | map( paths(scalars) ) | map( map(select(numbers)="[]") | join(".")) | unique'
       shell: bash
 
 # branding:
