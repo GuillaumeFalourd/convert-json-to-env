@@ -14,7 +14,7 @@ runs:
       run: |
         echo FILE: ${{ inputs.json_file }} 
         JSON=$(jq '.' ${{ inputs.json_file }})
-        echo $JSON
+        echo JSON: $JSON
         KEYS=$(cat ${{ inputs.json_file }} | jq 'select(objects)|=[.] | map( paths(scalars) ) | map( map(select(numbers)="[]") | join(".")) | unique')
         KEYS=${KEYS//[/ }
         KEYS=${KEYS//]/ }
@@ -24,8 +24,9 @@ runs:
         ## now loop through the above array
         for i in "${arr[@]}"
         do
-          echo KEY: "$i"
-          VALUE=$(echo $JSON | jq '."$i"')
+          KEY=$i
+          echo $KEY
+          VALUE=$(echo $JSON | jq '.$KEY')
           echo VALUE: $VALUE
           # Add to GITHUB_ENV
         done
