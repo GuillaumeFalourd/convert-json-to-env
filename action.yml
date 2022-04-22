@@ -1,0 +1,21 @@
+name: 'Convert JSON to ENV'
+
+description: 'Github Actions to convert variables from a JSON file to workflow ENV variables :octocat:'
+
+inputs:
+  json_file:
+    description: JSON file to convert to env variable
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: Git push and commit origin
+      run: |
+        echo FILE: ${{ inputs.json_file }} 
+        echo "${{ inputs.json_file }}" | jq -r '.'
+      shell: bash
+
+# branding:
+#     icon: 'git-commit'
+#     color: 'black'
