@@ -13,7 +13,8 @@ runs:
     - name: Git push and commit origin
       run: |
         echo FILE: ${{ inputs.json_file }} 
-        echo "${{ inputs.json_file }}" | jq -r '.'
+        JSON=$(echo jq '.' ${{ inputs.json_file }})
+        echo $JSON
       shell: bash
 
 # branding:
