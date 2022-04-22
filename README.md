@@ -1,6 +1,4 @@
-# <repo_name>
-
-[![Security Pipeline](https://github.com/GuillaumeFalourd/<repo_name>/actions/workflows/security-pipeline.yml/badge.svg)](https://github.com/GuillaumeFalourd/<repo_name>/actions/workflows/security-pipeline.yml) [![Super Linter](https://github.com/GuillaumeFalourd/<repo_name>/actions/workflows/super-linter.yml/badge.svg)](https://github.com/GuillaumeFalourd/<repo_name>/actions/workflows/super-linter.yml) [![Gitleaks](https://github.com/GuillaumeFalourd/<repo_name>/actions/workflows/gitleaks.yml/badge.svg)](https://github.com/GuillaumeFalourd/<repo_name>/actions/workflows/gitleaks.yml)
+# Convert JSON to ENV
 
 ☞ Github repository template to create other personal repositories 🧑‍💻🏗
 
@@ -10,16 +8,20 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 
 ## 🤝 Contributing
 
-☞ If you're interested in contributing to this repository, please follow the [guidelines](https://github.com/GuillaumeFalourd/<repo_name>/blob/main/CONTRIBUTING.md)
+☞ If you're interested in contributing to this repository, please follow the [guidelines](https://github.com/GuillaumeFalourd/convert-json-to-env
+/blob/main/CONTRIBUTING.md)
 
 ## 🏅 Licensed
 
-☞ This repository uses the [Apache License 2.0](https://github.com/GuillaumeFalourd/<repo_name>/blob/main/LICENSE)
+☞ This repository uses the [Apache License 2.0](https://github.com/GuillaumeFalourd/convert-json-to-env
+/blob/main/LICENSE)
 
 <!-- ### Contribuidores
 
-<a href="https://github.com/GuillaumeFalourd/<repo_name>/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=GuillaumeFalourd/<repo_name>" />
+<a href="https://github.com/GuillaumeFalourd/convert-json-to-env
+/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=GuillaumeFalourd/convert-json-to-env
+" />
 </a>
 
 (Criado com [contributors-img](https://contrib.rocks)) -->
