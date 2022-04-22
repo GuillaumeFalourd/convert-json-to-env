@@ -13,7 +13,7 @@ runs:
     - name: Git push and commit origin
       run: |
         echo FILE: ${{ inputs.json_file }} 
-        JSON=$(echo jq '.' ${{ inputs.json_file }})
+        JSON=$(jq '.' ${{ inputs.json_file }})
         echo $JSON
       shell: bash
 
