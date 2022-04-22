@@ -28,7 +28,7 @@ runs:
           VALUE=$(echo $JSON | jq '.["$i"]')
           echo VALUE: $VALUE
           # Add to GITHUB_ENV
-          jq -r '.$i' ${{ inputs.json_file }}
+          jq -r '."$i"' ${{ inputs.json_file }}
         done
         
       shell: bash
