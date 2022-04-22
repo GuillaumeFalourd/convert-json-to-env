@@ -19,13 +19,13 @@ runs:
         KEYS=${KEYS//[/ }
         KEYS=${KEYS//]/ }
         KEYS=${KEYS//,/ }
-        echo $KEYS
+        echo KEYS: $KEYS
         declare -a arr=(`echo ${KEYS}`);
         ## now loop through the above array
         for i in "${arr[@]}"
         do
           echo KEY: "$i"
-          VALUE=$(echo "$JSON" | jq '.["$i"]')
+          VALUE=$(cat ${{ inputs.json_file }} | jq '.["$i"]')
           echo VALUE: $VALUE
           # Add to GITHUB_ENV
         done
