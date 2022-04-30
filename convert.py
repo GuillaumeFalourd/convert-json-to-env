@@ -17,7 +17,7 @@ for key, value in data.items():
     key = key.upper()
     print(key, value)
     with open(env_file, "a") as myfile:
-        myfile.write(f"{key}={value}")
+        myfile.write(f"{key}={value}" + '\n')
 
 # Closing file
 f.close()
