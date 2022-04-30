@@ -23,11 +23,12 @@ runs:
 
     - name: Execute Python script # Run the run.py to get the latest data
       run: |
-        if [[ $OSTYPE == 'msys'* ]]; then
-          python ${{ github.action_path }}\convert.py ${{ inputs.json_file }}
-        else
-          python ${{ github.action_path }}/convert.py ${{ inputs.json_file }}
-        fi
+        # if [[ $OSTYPE == 'msys'* ]]; then
+        #   PATH=${{ github.action_path }}\convert.py
+        #   python $PATH ${{ inputs.json_file }}
+        # else
+          python "${{ github.action_path }}/convert.py" "${{ inputs.json_file }}"
+        # fi
       shell: bash
 
 # branding:
