@@ -22,7 +22,12 @@ runs:
     #   run: python -m pip install --upgrade pip requests
 
     - name: Execute Python script # Run the run.py to get the latest data
-      run: python ${{ github.action_path }}/convert.py ${{ inputs.json_file }}
+      run: |
+        if [[ $OSTYPE == 'msys'* ]]; then
+          python ${{ github.action_path }}\convert.py ${{ inputs.json_file }}
+        else
+          python ${{ github.action_path }}/convert.py ${{ inputs.json_file }}
+        fi
       shell: bash
 
 # branding:

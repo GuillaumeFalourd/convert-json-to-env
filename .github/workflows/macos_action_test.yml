@@ -1,12 +1,12 @@
-name: Action test on Ubuntu
+name: Action test on Macos
 
 on:
   push:
   workflow_dispatch:
 
 jobs:
-  ubuntu:
-    runs-on: ubuntu-latest
+  macos:
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2.3.4
       - uses: GuillaumeFalourd/convert-json-to-env@main
