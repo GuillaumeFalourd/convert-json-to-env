@@ -10,28 +10,19 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - name: Git push and commit origin
-      run: |
-        echo FILE: ${{ inputs.json_file }} 
-        JSON=$(jq '.' ${{ inputs.json_file }})
-        echo JSON: $JSON
-        KEYS=$(cat ${{ inputs.json_file }} | jq 'select(objects)|=[.] | map( paths(scalars) ) | map( map(select(numbers)="[]") | join(".")) | unique')
-        KEYS=${KEYS//[/ }
-        KEYS=${KEYS//]/ }
-        KEYS=${KEYS//,/ }
-        echo KEYS: $KEYS
-        declare -a arr=(`echo ${KEYS}`);
-        ## now loop through the above array
-        for i in "${arr[@]}"
-        do
-          KEY=$i
-          echo $KEY
-          VALUE=$(echo $JSON | jq '.\$KEY')
-          echo VALUE: $VALUE
-          # Add to GITHUB_ENV
-        done
-        
-      shell: bash
+    - name: Checkout repository content
+      uses: actions/checkout@v2 # Checkout the repository content to github runner.
+
+    - name: Setup Python Version
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8 # Install the python version needed
+
+    # - name: Install Python dependencies
+    #   run: python -m pip install --upgrade pip requests
+
+    - name: Execute Python script # Run the run.py to get the latest data
+      run: python ${{ github.action_path }}/convert.py
 
 # branding:
 #     icon: 'git-commit'
