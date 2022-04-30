@@ -15,9 +15,9 @@ data = json.load(f)
 
 for key, value in data.items():
     key = key.upper()
-    print key, value
+    print(key, value)
     with open(env_file, "a") as myfile:
-    myfile.write(f"{key}={value}")
+        myfile.write(f"{key}={value}")
 
 # Closing file
 f.close()
