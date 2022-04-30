@@ -23,6 +23,7 @@ runs:
 
     - name: Execute Python script # Run the run.py to get the latest data
       run: python ${{ github.action_path }}/convert.py
+      shell: bash
 
 # branding:
 #     icon: 'git-commit'
