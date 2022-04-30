@@ -12,3 +12,5 @@ jobs:
       - uses: GuillaumeFalourd/convert-json-to-env@main
         with:
           json_file: ./config.json
+      - run: echo ${{ env.KEY1 }}
+      - run: echo ${{ env.KEY2 }}
