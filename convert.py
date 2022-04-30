@@ -3,7 +3,7 @@ import sys
 
 print("Start conversion")
 print(sys.argv[1:])
-filename = sys.argv[1:]
+filename = sys.argv(1)
 
 # Opening JSON file
 f = open(filename)
