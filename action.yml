@@ -25,6 +25,6 @@ runs:
       run: python "${{ github.action_path }}/convert.py" "${{ inputs.json_file }}"
       shell: bash
 
-# branding:
-#     icon: 'git-commit'
-#     color: 'black'
+branding:
+    icon: 'file-text'
+    color: 'black'
