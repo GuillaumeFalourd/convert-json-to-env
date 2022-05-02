@@ -2,6 +2,8 @@
 
 [![Action test on Ubuntu](https://github.com/GuillaumeFalourd/convert-json-to-env/actions/workflows/ubuntu_action_test.yml/badge.svg)](https://github.com/GuillaumeFalourd/convert-json-to-env/actions/workflows/ubuntu_action_test.yml) [![Action test on Macos](https://github.com/GuillaumeFalourd/convert-json-to-env/actions/workflows/macos_action_test.yml/badge.svg)](https://github.com/GuillaumeFalourd/convert-json-to-env/actions/workflows/macos_action_test.yml) [![Action test on Windows](https://github.com/GuillaumeFalourd/convert-json-to-env/actions/workflows/windows_action_test.yml/badge.svg)](https://github.com/GuillaumeFalourd/convert-json-to-env/actions/workflows/windows_action_test.yml)
 
+![](https://user-images.githubusercontent.com/22433243/166232887-64d9e68d-ec7f-4a77-8253-75c614c2d0ff.png)
+
 ☞ Github Actions to convert variables from a JSON file to workflow ENV variables :octocat:
 
 _**Note**: This action is supported on **all runners** operating systems (`ubuntu`, `macos`, `windows`)_
