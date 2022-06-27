@@ -18,10 +18,7 @@ runs:
       with:
         python-version: 3.8 # Install the python version needed
 
-    # - name: Install Python dependencies
-    #   run: python -m pip install --upgrade pip requests
-
-    - name: Execute Python script # Run the run.py to get the latest data
+    - name: Execute Python script # Run the convert.py
       run: python "${{ github.action_path }}/convert.py" "${{ inputs.json_file }}"
       shell: bash
 
